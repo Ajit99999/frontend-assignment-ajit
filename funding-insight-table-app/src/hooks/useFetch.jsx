@@ -10,7 +10,7 @@ const useFetch = (url) => {
   function dataReducerFn(state, action) {
     switch (action.type) {
       case 'FETCH_INIT':
-        return { ...state, loading: true, error: null };
+        return { ...state, loading: true};
       case 'FETCH_SUCCESS':
         return { ...state, loading: false, data: action.payload };
       case 'FETCH_FAILURE':

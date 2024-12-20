@@ -24,12 +24,34 @@ function App() {
       </div>
     );
   }
-  if (error)
+  if (error) {
     return (
       <div className="container">
         <p>Error: {error}</p>
       </div>
     );
+  }
+
+  if (data?.length === 0) {
+    return (
+      <div className="container">
+        <p>No data available.</p>
+      </div>
+    );
+  }
+  const isValidData = data.every(
+    (item) =>
+      item.hasOwnProperty("s.no") &&
+      item.hasOwnProperty("percentage.funded") &&
+      item.hasOwnProperty("amt.pledged")
+  );
+  if (!isValidData) {
+    return (
+      <div className="container">
+        <p>Data format is incorrect.</p>
+      </div>
+    );
+  }
 
   return <DataTable columns={columns} paginationData={pagination} />;
 }
