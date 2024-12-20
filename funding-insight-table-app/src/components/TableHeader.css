@@ -1,0 +1,30 @@
+.table-header th {
+  text-align: left;
+  padding: 0.625rem 0.9375rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #4a4a4a;
+  background-color: #e6e6e6;
+  border-bottom: 0.09375rem solid #e6e6e6;
+}
+
+@media (max-width: 1024px) {
+  .table-header th {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-header th {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-header th {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.625rem;
+  }
+}
